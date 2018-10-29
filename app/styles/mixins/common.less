@@ -1,0 +1,27 @@
+.icon-select() {
+    &:hover {
+        border: 1px solid @gray;
+        color: @gray;
+        &:before, &:after {
+            background-color: @gray;
+        }
+    }
+
+    &:before, &:after {
+        content: '';
+        background-color: @gray-light;
+        position: absolute;
+        top: 50%;
+        width: 8px;
+        height: 1px;
+        transition: background-color .5s, border .5s;
+    }
+    &:before {
+        right: 5px;
+        transform: rotate(-45deg);
+    }
+    &:after {
+        right: 10px;
+        transform: rotate(45deg);
+    }
+}

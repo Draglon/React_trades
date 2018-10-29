@@ -1,0 +1,60 @@
+.exchange {
+    margin: 5em 0;
+
+    &__description {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2em;
+    }
+
+    &__text {
+        flex: 0 0 50%;
+    }
+
+    &__rate {
+        flex: 0 0 50%;
+        text-align: right;
+    }
+
+    &__form {
+        border-top: @border-solid-base;
+        border-bottom: @border-solid-base;
+        padding: 1.5em 0 2.5em;
+    }
+
+    &__field {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        .form__field-label {
+            flex: 0 0 15%;
+            width: 15%;
+        }
+        .form__field-input {
+            flex: 0 0 ~'calc(85% - 100px)';
+            width: ~'calc(85% - 100px)';
+            input {
+                border-radius: @border-radius-base 0 0 @border-radius-base;
+            }
+        }
+        .form__field-select {
+            flex: 0 0 100px;
+            width: 100px;
+
+            select {
+                border-left: 0;
+                border-radius: 0 @border-radius-base @border-radius-base 0;
+                text-align-last: center;
+                text-align: center; 
+            }
+        }
+    }
+
+    &__btns {
+        button {
+            width: 100%;
+            height: 40px;
+        }
+    }
+}

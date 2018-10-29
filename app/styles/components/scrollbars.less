@@ -1,0 +1,34 @@
+.scrollbar {
+    & > div:nth-child(1) {}
+    & > div:nth-child(2) {
+        opacity: 0;
+        transition: opacity .3s;
+        // & > div {
+        //     background-color: rgba(0, 0, 0, 0);
+        //     transition: background-color .3s;
+        // }
+    }
+    & > div:nth-child(3) {
+        opacity: 0;
+        transition: opacity .3s;
+        // & > div {
+        //     background-color: rgba(0, 0, 0, 0);
+        //     transition: background-color .3s;
+        // }
+    }
+
+    &:hover {
+        & > div:nth-child(2) {
+            opacity: 1;
+            // & > div {
+            //     background-color: rgba(0, 0, 0, 0.2);
+            // }
+        }
+        & > div:nth-child(3) {
+            opacity: 1;
+            // & > div {
+            //     background-color: rgba(0, 0, 0, 0.2);
+            // }
+        }
+    }
+}

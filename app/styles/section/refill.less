@@ -1,0 +1,116 @@
+.refill {
+    margin: 5em 0;
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        background-color: @white;
+        border: 1px solid @gray-border;
+        border-radius: @border-radius-base;
+        padding: 20px;
+        flex: 0 0 ~'calc(50% - 10px)';
+        width: ~'calc(50% - 10px)';
+    }
+}
+
+.payments {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: flex-end;
+        align-items: flex-end;
+    }
+
+    &__item {
+        line-height: 1;
+        padding-right: 20px;
+        margin-top: 20px;
+        flex: 0 0 33.33%;
+        width: 33.33%;
+    }
+
+    &__label-text {
+        display: inline-block;
+        font-size: @font-size14;
+        margin-bottom: 5px;
+    }
+
+    &__input + &__label {
+        padding: 0;
+        &:before, &:after {
+            display: none !important;
+        }
+        figure {
+           border: 1px dotted @gray-light;
+           filter: grayscale(100%);
+            -webkit-filter: grayscale(100%);
+            -moz-filter: grayscale(100%);
+            -ms-filter: grayscale(100%);
+            -o-filter: grayscale(100%);
+            filter: @gray;
+            -webkit-filter: grayscale(1);
+            transition: .3s;
+       }
+    }
+
+    &__input:checked + &__label {
+        color: @blue;
+        figure {
+            border: 1px solid @blue;
+            -webkit-filter: grayscale(0%);
+            -moz-filter: grayscale(0%);
+            -ms-filter: grayscale(0%);
+            -o-filter: grayscale(0%);
+            filter: none;
+        }
+    }
+
+    &__figure {
+        background-image: url('../../images/payments/doge.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        display: block;
+        height: 55px;
+    }
+
+    &__deposit {
+        background-color: @red_20;
+        border-radius: @border-radius-base;
+        color: @red;
+        font-size: @font-size14;
+        padding: 10px 15px;
+        margin: 10px 0;
+    }
+
+    &__commission {
+        background-color: @gray-lighter;
+        border: 1px solid @gray-border;
+        border-radius: @border-radius-base;
+        box-shadow: 1px 2px 2px 0px @black_20;
+        margin: 10px 0;
+        padding: 10px 15px;
+    }
+
+    &__commission-item {
+        font-size: @font-size14;
+    }
+
+    &__coin {
+        color: @gray-light;
+        font-size: @font-size14;
+        position: absolute;
+        top: ~'calc(50% - 9px)';
+        right: 10px;
+    }
+
+    &__form {
+        margin: 20px 0;
+
+        input[type='text'] {
+            padding-right: 60px;
+        }
+    }
+}

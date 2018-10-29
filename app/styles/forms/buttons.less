@@ -1,0 +1,86 @@
+input[type=submit], button, .btn {
+    background: @btn-bg;
+    border-radius: @btn-border-radius;
+    box-shadow: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: @btn-font-size;
+    font-family: @btn-font-family;
+    font-weight: @btn-font-weight;
+    padding: @btn-padding;
+    height: @btn-height;
+    line-height: @btn-height;
+    text-align: center;
+    white-space: nowrap;
+    transition: background-color .5s, border .5s, color .5s;
+}
+input[type=submit]:hover, button:hover, button:focus {
+    cursor: pointer;
+}
+.btn--small {
+    font-size: @font-size14;
+    line-height: 30px;
+    height: 32px; 
+}
+.btn--middle {
+    height: 40px;
+}
+.btn-primary, .btn-success, .btn-info, .btn-warning, .btn-danger, .btn-dark {
+  color: @btn-color;
+}
+// Button Primary
+.btn-primary {
+    background-color: @btn-primary-bg;
+    border: @btn-primary-border-color;
+    
+    &:hover {
+        background-color: @btn-primary-bg-hover;
+        border: @btn-primary-border-color-hover;
+    }
+}
+// Button Success
+.btn-success {
+    background-color: @btn-success-bg;
+    border: @btn-success-border-color;
+    
+    &:hover {
+        background-color: @btn-success-bg-hover;
+        border: @btn-success-border-color-hover;
+    }
+}
+// Button Warning
+.btn-warning {
+    background-color: @btn-warning-bg;
+    border: @btn-warning-border-color;
+    
+    &:hover {
+        background-color: @btn-warning-bg-hover;
+        border: @btn-warning-border-color-hover;
+    }
+}
+// Button Danger
+.btn-danger {
+    background-color: @btn-danger-bg;
+    border: @btn-danger-border-color;
+    
+    &:hover {
+        background-color: @btn-danger-bg-hover;
+        border: @btn-danger-border-color-hover;
+    }
+}
+// Button Transparent
+.btn-transparent {
+    border: 1px solid @gray-light;
+    color: @gray-light;
+    transition: border-color .3s, color .3s;
+    &:hover {
+        border-color: @gray;
+        color: @gray;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    input[type=submit], button, .btn {
+        font-size: @btn-font-size-mobile;
+    }
+}

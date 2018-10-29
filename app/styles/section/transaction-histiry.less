@@ -1,0 +1,17 @@
+.history-transaction {
+    margin: 5em 0;
+
+    &__title {
+
+    }
+
+    &__table {
+        td, th {
+            text-align: left;
+        }
+        td {
+            &:nth-child(2) {color: @text-positive;}
+            &:nth-child(5) {color: @text-success;}
+        }
+    }
+}

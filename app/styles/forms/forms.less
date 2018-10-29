@@ -1,0 +1,57 @@
+.form {
+    &__field {
+        position: relative;
+        margin-bottom: 1.5em;
+        &--border {
+            border-bottom: 1px solid @gray-border;
+            margin-bottom: 15px;
+            padding-bottom: 20px;
+        }
+
+        &--error {
+            input[type='text'],
+            input[type='email'],
+            input[type='password'] {
+                border: 1px solid @red !important;
+            }
+        }
+    }
+
+    &__field-input {
+        position: relative;
+    }
+
+    &__field-error {
+        color: @red;
+        display: block;
+        font-size: @font-size12;
+        margin-top: 5px;
+        padding: 0 10px;
+    }
+
+    &__label {
+        display: inline-block;
+        font-size: @font-size14;
+        padding: 0 10px;
+        margin-bottom: 5px;
+    }
+
+    &__btns {
+
+    }
+
+    &__field-coin {
+        color: @gray-light;
+        font-size: @font-size12;
+        position: absolute;
+        top: ~'calc(50% - 6px)';
+        right: 10px;
+    }
+
+    &__example {
+        color: @gray-light;
+        font-size: @font-size12;
+        margin-top: 5px;
+        padding: 0 10px;
+    }
+}
