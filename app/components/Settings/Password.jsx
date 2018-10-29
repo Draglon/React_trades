@@ -1,6 +1,7 @@
-var React = require('react');
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-class SettingsPassword extends React.Component {
+class SettingsPassword extends Component {
     render() {
         return (
             <section className='section password'>
@@ -40,4 +41,11 @@ class SettingsPassword extends React.Component {
     }
 }
  
-module.exports = SettingsPassword;
+export default connect(
+    state => ({
+
+    }),
+    dispatch => ({
+        
+    })
+)(SettingsPassword);

@@ -1,6 +1,7 @@
-var React = require('react');
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-class SettingsSecurity extends React.Component {
+class SettingsSecurity extends Component {
     render() {
         return (
             <section className='section security'>
@@ -17,5 +18,12 @@ class SettingsSecurity extends React.Component {
         );
     }
 }
- 
-module.exports = SettingsSecurity;
+
+export default connect(
+    state => ({
+
+    }),
+    dispatch => ({
+        
+    })
+)(SettingsSecurity);

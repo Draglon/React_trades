@@ -1,6 +1,7 @@
-var React = require('react');
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-class SettingsIpAddress extends React.Component {
+class SettingsIpAddress extends Component {
     render() {
         return (
             <section className='section ip-address'>
@@ -33,5 +34,12 @@ class SettingsIpAddress extends React.Component {
         );
     }
 }
- 
-module.exports = SettingsIpAddress;
+
+export default connect(
+    state => ({
+
+    }),
+    dispatch => ({
+        
+    })
+)(SettingsIpAddress);

@@ -1,6 +1,7 @@
-var React = require('react');
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-class SettingsNotifications extends React.Component {
+class SettingsNotifications extends Component {
     render() {
         return (
             <section className='section notification'>
@@ -20,5 +21,12 @@ class SettingsNotifications extends React.Component {
         );
     }
 }
- 
-module.exports = SettingsNotifications;
+
+export default connect(
+    state => ({
+
+    }),
+    dispatch => ({
+        
+    })
+)(SettingsNotifications);

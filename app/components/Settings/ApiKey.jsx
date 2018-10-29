@@ -1,6 +1,7 @@
-var React = require('react');
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-class SettingsApiKey extends React.Component {
+class SettingsApiKey extends Component {
     render() {
         return (
             <section className='section api-key'>
@@ -29,5 +30,12 @@ class SettingsApiKey extends React.Component {
         );
     }
 }
- 
-module.exports = SettingsApiKey;
+
+export default connect(
+    state => ({
+
+    }),
+    dispatch => ({
+        
+    })
+)(SettingsApiKey);

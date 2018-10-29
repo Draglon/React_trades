@@ -1,6 +1,7 @@
-var React = require('react');
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-class SettingsSessions extends React.Component {
+class SettingsSessions extends Component {
     render() {
         return (
             <section className='section sessions'>
@@ -65,5 +66,12 @@ class SettingsSessions extends React.Component {
         );
     }
 }
- 
-module.exports = SettingsSessions;
+
+export default connect(
+    state => ({
+
+    }),
+    dispatch => ({
+        
+    })
+)(SettingsSessions);

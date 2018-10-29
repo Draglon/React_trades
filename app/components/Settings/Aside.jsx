@@ -1,6 +1,7 @@
-var React = require('react');
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-class SettingsAside extends React.Component {
+class SettingsAside extends Component {
     render() {
         return (
             <aside className='aside-settings'>
@@ -43,6 +44,12 @@ class SettingsAside extends React.Component {
         );
     }
 }
- 
-module.exports = SettingsAside;
 
+export default connect(
+    state => ({
+
+    }),
+    dispatch => ({
+        
+    })
+)(SettingsAside);

@@ -16,8 +16,8 @@ import News from '../News/index.jsx';
 import Trade from '../Trade/index.jsx';
 import Wallet from '../Wallet/index.jsx';
 import Notifications from '../Notifications/index.jsx';
-// var Settings = require('./pages/Settings.js');
-
+import Settings from '../Settings/index.jsx';
+// Pages - registrations
 import Login from '../Login/index.jsx';
 import Signup from '../Signup/index.jsx';
 import ForgotPassword from '../ForgotPassword/index.jsx';
@@ -46,7 +46,7 @@ class AppComponent extends Component {
                                     <Route path='/exchange' component={Exchange} />
                                     <Route path='/wallet' component={Wallet} />
                                     <Route path='/notifications' component={Notifications} />
-                                    {/* <Route path='/settings' component={Settings} /> */}
+                                    <Route path='/settings' component={Settings} />
                                     <Route path='/login' component={Login} />
                                     <Route path='/signup' component={Signup} />
                                     <Route path='/forgot' component={ForgotPassword} />
@@ -62,7 +62,6 @@ class AppComponent extends Component {
         );
     }
 }
-// module.exports = AppComponent;
 
 export default connect(
     state => ({
