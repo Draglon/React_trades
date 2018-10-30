@@ -1,0 +1,23 @@
+.navbar {
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 2em;
+    }
+
+    &__item {
+        margin: 0 8px;
+    }
+
+    &__link {
+        border-bottom: 2px solid @white_00; 
+        color: @white;
+        font-size: @font-size16;
+        transition: border .3s;
+
+        &:hover {
+            border-bottom: 2px solid @white; 
+        }
+    }
+}

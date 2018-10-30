@@ -11,9 +11,9 @@ class Footer extends Component {
                         <div className='footer__item'>
                             <h3 className='footer__title'>Продукты</h3>
                             <ul className='footer__list'>
-                                <li><NavLink to='/'>Кошелек</NavLink></li>
-                                <li><NavLink to='/'>Торги</NavLink></li>
-                                <li><NavLink to='/'>Обмен</NavLink></li>
+                                <li><NavLink to='/wallet'>Кошелек</NavLink></li>
+                                <li><NavLink to='/trade'>Торги</NavLink></li>
+                                <li><NavLink to='/exchange'>Обмен</NavLink></li>
                                 <li><NavLink to='/'>API</NavLink></li>
                             </ul>
                         </div>
@@ -30,7 +30,7 @@ class Footer extends Component {
                             <ul className='footer__list'>
                                 <li><NavLink to='/'>О нас</NavLink></li>
                                 <li><NavLink to='/'>Контакты</NavLink></li>
-                                <li><NavLink to='/'>Новости</NavLink></li>
+                                <li><NavLink to='/news'>Новости</NavLink></li>
                             </ul>
                         </div>
                         <div className='footer__item'>

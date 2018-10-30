@@ -13,18 +13,14 @@ class Header extends Component {
         return (
             <header className='header'>
                 <div className='wrapper'>
-                    <div className='header__left-side'>
-                        <Logo />
-                        <Navbar />
-                    </div>
+                    <Logo />
 
-                    <div className='header__right-side'>
-                        <nav className='header__nav'>
-                            {/* <Lang /> */}
-                            <Notification />
-                            <Profile />
-                            <Auth />
-                        </nav>
+                    <div className='header__nav'>
+                        <Navbar />
+                        {/* <Lang /> */}
+                        {/* <Notification />
+                        <Profile /> */}
+                        <Auth />
                     </div>
                 </div>
             </header>

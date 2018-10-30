@@ -7,8 +7,8 @@ import { Scrollbars } from 'react-custom-scrollbars';
 const history = createBrowserHistory();
 
 // Components
-import Header from '../Header/index.jsx';
-import Footer from '../Footer/index.jsx';
+import Header from '../../components/Header/index.jsx';
+import Footer from '../../components/Footer/index.jsx';
 // Pages
 import AdminPanel from '../AdminPanel/index.jsx';
 import Home from '../Home/index.jsx';
