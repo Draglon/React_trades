@@ -7,6 +7,9 @@ import Lang from '../../components/Notification/index.jsx';
 import Notification from '../../components/Notification/index.jsx';
 import Profile from '../../components/Profile/index.jsx';
 import Auth from '../../components/Auth/index.jsx';
+import Hamburger from '../../components/Hamburger/index.jsx';
+
+let logged = false;
 
 class Header extends Component {
     render() {
@@ -16,6 +19,7 @@ class Header extends Component {
                     <Logo />
 
                     <div className='header__nav'>
+                        <Hamburger />
                         <Navbar />
                         {/* <Lang /> */}
                         {/* <Notification />

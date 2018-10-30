@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {NavLink, BrowserRouter}  from 'react-router-dom';
 
-import img from '../../images/logo.jpg';
-
 let logged = false;
 
 class Logo extends Component {
