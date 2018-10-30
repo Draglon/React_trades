@@ -1,11 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
-import Home from '../Home/index.jsx';
-import News from '../News/index.jsx';
-import NotFound from '../NotFound/index.jsx';
-
-const components = { Home, News, NotFound }
+import * as components from './components.jsx';
 
 const Switcher = ({ page }) => {
   const Component = components[page]

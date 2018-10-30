@@ -15,7 +15,6 @@ class News extends Component{
 
 export default connect(
     state => ({
-
     }),
     dispatch => ({
         

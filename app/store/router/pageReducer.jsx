@@ -5,5 +5,5 @@ const components = {
   NEWS: 'News',
   [NOT_FOUND]: 'NotFound'
 }
- 
+
 export default (state = 'HOME', action = {}) => components[action.type] || state;
