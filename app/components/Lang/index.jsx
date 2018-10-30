@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {NavLink, BrowserRouter}  from 'react-router-dom';
 
 class Lang extends Component {
     render() {
@@ -9,8 +8,8 @@ class Lang extends Component {
                 <div className='lang__link'>English</div>
 
                 <ul className='lang__list'>
-                    <li className='lang__item'><NavLink>English</NavLink></li>
-                    <li className='lang__item'><NavLink>Русский</NavLink></li>
+                    <li className='lang__item'>English</li>
+                    <li className='lang__item'>Русский</li>
                 </ul>
             </div>
         );

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import Logo from '../../components/Logo/index.jsx';
 import Navbar from '../../components/Navbar/index.jsx';
-import Lang from '../../components/Notification/index.jsx';
+import Lang from '../../components/Lang/index.jsx';
 import Notification from '../../components/Notification/index.jsx';
 import Profile from '../../components/Profile/index.jsx';
 import Auth from '../../components/Auth/index.jsx';
@@ -19,13 +19,18 @@ class Header extends Component {
                     <Logo />
 
                     <div className='header__nav'>
-                        <Hamburger />
                         <Navbar />
                         {/* <Lang /> */}
-                        {/* <Notification />
-                        <Profile /> */}
-                        <Auth />
+                        {logged ?
+                            <>
+                                <Notification />
+                                <Profile />
+                            </>
+                        :
+                            <Auth />
+                        }
                     </div>
+                    <Hamburger />
                 </div>
             </header>
         );
