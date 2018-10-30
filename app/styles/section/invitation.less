@@ -1,4 +1,57 @@
 .invitation {
-    padding: 3em 0;
-    height: 100%;
+    background-image: url('../../images/home.jpg');
+    padding: 5em 0 3em;
+    min-height: ~'calc(100vh - @{header-height})';
+
+    &:before {
+        content: '';
+        background-image: url('../../images/devices.png');
+        background-repeat: no-repeat;
+        background-position: center 80%;
+        background-size: 500px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    &__title {
+        color: @white;
+        margin-bottom: .5em;
+        text-align: center;
+    }
+
+    &__subtitle {
+        color: @white;
+        text-align: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .invitation {
+        
+        &:before {
+            background-size: 450px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .invitation {
+        
+        &:before {
+            background-size: 350px;
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    .invitation {
+        
+        &:before {
+            background-size: 300px;
+            background-position: center 85%;
+        }
+    }
 }
