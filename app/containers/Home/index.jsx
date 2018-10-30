@@ -7,7 +7,7 @@ class Home extends Component {
             <section className='section invitation'>
                 <div className='wrapper'>
                     <h1 className='invitation__title'>Cryptocurrency Trading Platform</h1>
-                    <h2 className='invitation__subtitle'>OPEN ACCOUNT FOR FREE AND START TRADING NOW!</h2>
+                    <h3 className='invitation__subtitle'>OPEN ACCOUNT FOR FREE AND START TRADING NOW!</h3>
                 </div>
             </section>
         );
