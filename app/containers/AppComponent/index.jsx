@@ -6,6 +6,8 @@ import { Scrollbars } from 'react-custom-scrollbars';
 
 const history = createBrowserHistory();
 
+import Switcher from './switcher.jsx';
+
 // Components
 import Header from '../Header/index.jsx';
 import Footer from '../Footer/index.jsx';
@@ -28,6 +30,10 @@ class AppComponent extends Component {
     render() {
         return(
             <Scrollbars className='scrollbar' style={{ width: '100%', height: '100vh' }}>
+                {/* <Router>
+                    <Header />
+                    <Switcher />
+                </Router> */}
                 <Router history={history}>
                     {window.location.pathname === '/admin' ? 
                         <main className='main'>
