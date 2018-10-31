@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { getMenuToggle } from '../../store/selector.jsx';
 
 import Logo from '../../components/Logo/index.jsx';
 import Navbar from '../../components/Navbar/index.jsx';
@@ -13,18 +14,20 @@ let logged = false;
 
 class Header extends Component {
     render() {
+        const { menuVisible } = this.props;
+
         return (
             <header className='header'>
                 <div className='wrapper'>
                     <Logo />
 
-                    <div className='header__nav'>
+                    <div className={`header__nav${menuVisible ? ' active' : ''}`}>
                         <Navbar />
                         {/* <Lang /> */}
                         {logged ?
                             <>
-                                <Notification />
-                                <Profile />
+                                {/* <Notification />
+                                <Profile /> */}
                             </>
                         :
                             <Auth />
@@ -39,7 +42,7 @@ class Header extends Component {
 
 export default connect(
     state => ({
-
+        menuVisible: getMenuToggle(state),
     }),
     dispatch => ({
         

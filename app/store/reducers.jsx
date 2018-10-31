@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
-import { POPUP_TOGGLE } from './actions.jsx';
+import { POPUP_TOGGLE, MENU_TOGGLE } from './actions.jsx';
 
+// Popup
 const popupReducer = (state = false, action) => {
     switch (action.type) {
         case POPUP_TOGGLE:
@@ -10,8 +11,20 @@ const popupReducer = (state = false, action) => {
     }
 };
 
-const popup = combineReducers({
+export const popup = combineReducers({
     popupToggle: popupReducer,
 });
 
-export default popup;
+// Mobile Menu
+const menuReducer = (state = false, action) => {
+    switch (action.type) {
+        case MENU_TOGGLE:
+            return !state;
+        default:
+            return state;
+    }
+};
+
+export const menu = combineReducers({
+    menuToggle: menuReducer,
+});
