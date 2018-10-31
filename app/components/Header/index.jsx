@@ -10,7 +10,7 @@ import Profile from '../../components/Profile/index.jsx';
 import Auth from '../../components/Auth/index.jsx';
 import Hamburger from '../../components/Hamburger/index.jsx';
 
-let logged = true;
+let logged = false;
 
 class Header extends Component {
     render() {
