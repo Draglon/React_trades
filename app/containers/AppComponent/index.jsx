@@ -40,7 +40,7 @@ class AppComponent extends Component {
                             </Switch>
                         </main>
                     :
-                        <div>
+                        <>
                             <Header />
                             <main className='main page'>
                                 <Switch>
@@ -59,7 +59,7 @@ class AppComponent extends Component {
                                 </Switch>
                                 <Footer />
                             </main>
-                        </div>
+                        </>
                     }
                 </Router>
             </Scrollbars>

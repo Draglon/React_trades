@@ -5,7 +5,7 @@ class Lang extends Component {
     render() {
         return (
             <div className='lang'>
-                <div className='lang__link'>English</div>
+                <div className='lang__btn'>en</div>
 
                 <ul className='lang__list'>
                     <li className='lang__item'>English</li>

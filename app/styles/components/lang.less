@@ -1,12 +1,53 @@
 .lang {
-    &__link {
-        border-bottom: 1px solid @white_00;
-        font-size: @font-size16;
+    &__btn {
+        background-color: rgba(255, 255, 255, 0);
+        border: 1px solid #cfcfcf;
+        border-radius: 15px;
+        color: #fff;
+        cursor: default;
+        display: block;
+        font-size: 1.4rem;
+        padding: 0 20px 0 15px;
+        position: relative;
+        height: 30px;
+        line-height: 30px;
         margin: 0 8px;
-        transition: border .3s;
+        .icon-select;
+
+        &:before, &:after {
+            background-color: @white;
+            transition: transform .3s;
+        }
+
+        &:hover, &.active {
+            color: @white;
+            border: 1px solid @gray-border;
+            background-color: @blue-dark;
+
+            &:before {
+                background-color: @white;
+                transform: rotate(45deg);
+            }
+            &:after {
+                background-color: @white;
+                transform: rotate(-45deg);
+            }
+        }
+
+        i {
+            margin-right: 10px; 
+        }
 
         &:hover {
             border-bottom: 1px solid @white;
         }
+    }
+
+    &__list {
+        display: none;
+    }
+
+    &__item {
+
     }
 }

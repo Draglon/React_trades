@@ -10,7 +10,7 @@ import Profile from '../../components/Profile/index.jsx';
 import Auth from '../../components/Auth/index.jsx';
 import Hamburger from '../../components/Hamburger/index.jsx';
 
-let logged = false;
+let logged = true;
 
 class Header extends Component {
     render() {
@@ -20,19 +20,13 @@ class Header extends Component {
             <header className='header'>
                 <div className='wrapper'>
                     <Logo />
-
                     <div className={`header__nav${menuVisible ? ' active' : ''}`}>
                         <Navbar />
-                        {/* <Lang /> */}
-                        {logged ?
-                            <>
-                                {/* <Notification />
-                                <Profile /> */}
-                            </>
-                        :
-                            <Auth />
-                        }
+                        <Notification />
+                        <Lang />
+                        {logged ? <Profile /> : <Auth />}
                     </div>
+                    {/* {logged ?  <Profile /> : null} */}
                     <Hamburger />
                 </div>
             </header>
