@@ -19,6 +19,7 @@
         color: @white;
         font-size: @font-size14;
         font-weight: bold;
+        margin-bottom: 10px;
         text-transform: uppercase;
     }
 
@@ -50,33 +51,42 @@
 // -------------------------- screen: 767px ---------------------
 @media (max-width: 767px) {
     .footer {
-
         &__item {
-            flex: 0 0 50%;
-            width: 50%;
             margin-bottom: 2em;
         }
+
+
     }
 }
 
-// -------------------------- screen: 480px ---------------------
-@media (max-width: 480px) {
+// -------------------------- screen: 380px ---------------------
+@media (max-width: 520px) {
     .footer {
-        &__title {
-            margin-bottom: 5px;
-        }
+        text-align: center;
 
         &__item {
+            border-bottom: 1px solid @border-color-blue;
             flex: 0 0 100%;
             width: 100%;
-            text-align: center;
-            &:last-child {margin: 0;}
+            &:last-child {
+                border: none;
+                margin: 0;
+            }
         }
 
         &__list {
+            padding-bottom: 2em;
             li {
+                border: none;
                 margin: 0;
+                margin-bottom: 5px;
+                padding: 0 10px;
             }
+        }
+        
+        
+        &__copy {
+            margin: 0;
         }
     }
 }
