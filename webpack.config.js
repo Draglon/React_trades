@@ -5,20 +5,20 @@ module.exports = {
     devServer: {
         historyApiFallback: true
     },
-    entry: "./app/app.jsx", // входная точка - исходный файл
+    entry: './app/app.jsx', // входная точка - исходный файл
     output:{
         path: path.resolve(__dirname, './public'), // путь к каталогу выходных файлов - папка public
         publicPath: '/public/',
-        filename: "bundle.js" // название создаваемого файла
+        filename: 'bundle.js' // название создаваемого файла
     },
     module:{
         rules:[   
             { // Загрузчик для jsx
                 test: /\.jsx?$/,
                 exclude: /(node_modules)/,
-                loader: "babel-loader",
+                loader: 'babel-loader',
                 options:{
-                    presets:["@babel/preset-env", "@babel/preset-react"]
+                    presets:['@babel/preset-env', '@babel/preset-react']
                 }
             },
             { // Загрузчик для шрифтов
@@ -48,16 +48,16 @@ module.exports = {
             },
             { // Загрузчик для css файлов
                 test: /\.css$/,
-                loader: "style-loader!css-loader!autoprefixer-loader",
+                loader: 'style-loader!css-loader!autoprefixer-loader',
                 exclude: [/node_modules/, /public/]
             },
             { // Загрузчик для less файлов
                 test: /\.less$/,
                 exclude: [/node_modules/, /public/],
                 use: [
-                    {loader: "style-loader"},
-                    {loader: "css-loader"},
-                    {loader: "less-loader"}
+                    {loader: 'style-loader'},
+                    {loader: 'css-loader'},
+                    {loader: 'less-loader'}
                 ]
             }
         ]
