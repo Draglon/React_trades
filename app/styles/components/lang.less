@@ -1,9 +1,15 @@
 .lang {
+    position: relative;
+
+    &:hover &__list {
+        display: block;
+    }
+
     &__btn {
-        background-color: rgba(255, 255, 255, 0);
+        background-color: @black_00;
         border: 1px solid #cfcfcf;
         border-radius: 15px;
-        color: #fff;
+        color: @white;
         cursor: default;
         display: block;
         font-size: 1.4rem;
@@ -44,11 +50,30 @@
     }
 
     &__list {
+        background-color: @blue-dark;
+        // border: 1px solid @white;
+        border-radius: @border-radius-base;
         display: none;
+        padding: .5em;
+        position: absolute;
+        top: 100%;
+        right: 8px;
     }
 
     &__item {
+        color: @white;
+        cursor: pointer;
+        font-size: @font-size14;
+        padding: 5px 15px;
+        border-bottom: 1px solid @blue;
+        &:last-child {
+            margin-bottom: 0;
+            border: none;
+        }
 
+        &:hover {
+            background-color: #004a7c;
+        }
     }
 }
 
@@ -57,10 +82,28 @@
     .lang {
         position: absolute;
         top: 1.5em;
-        left: 1em;
+        left: 10px;
 
         &__btn {
             margin: 0;
+
+            &:hover {
+                border: 1px solid @gray-light;
+            }
+        }
+
+        &__list {
+            border: 1px solid @gray-light;
+            left: 0;
+            min-width: 100px;
+        }
+
+        &__item {
+            border-bottom: 1px solid @gray-light;
+
+            &:last-child {
+                border: none;
+            }
         }
     }
 }

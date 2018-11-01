@@ -6,11 +6,12 @@ import Logo from '../../components/Logo/index.jsx';
 import Navbar from '../../components/Navbar/index.jsx';
 import Lang from '../../components/Lang/index.jsx';
 import Notification from '../../components/Notification/index.jsx';
-import Profile from '../../components/Profile/index.jsx';
 import Auth from '../../components/Auth/index.jsx';
 import Hamburger from '../../components/Hamburger/index.jsx';
+import Profile from '../../components/Profile/index.jsx';
+import ProfileBalance from '../../components/Profile/ProfileBalance.jsx';
 
-let logged = true;
+let logged = false;
 
 class Header extends Component {
     render() {
@@ -26,8 +27,10 @@ class Header extends Component {
                         <Lang />
                         {logged ? <Profile /> : <Auth />}
                     </div>
-                    {/* {logged ?  <Profile /> : null} */}
-                    <Hamburger />
+                    <div className='header__btns'>
+                        <ProfileBalance /> 
+                        <Hamburger />
+                    </div>
                 </div>
             </header>
         );

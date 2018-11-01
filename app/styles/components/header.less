@@ -19,12 +19,23 @@
         justify-content: space-between;
         align-items: center;
     }
+
+    &__btns {
+        display: none;
+    }
 }
 
 // -------------------------- screen: 767px ---------------------
 @media (max-width: 767px) {
     .header {
         display: block;
+        height: @header-height-mobile;
+
+        &__btns {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
         &__nav {
             display: none;
@@ -37,6 +48,10 @@
                 right: 0;
                 width: 25em;
                 z-index: 1;
+            }
+
+            .profile__balance {
+                display: none;
             }
         }
     }
