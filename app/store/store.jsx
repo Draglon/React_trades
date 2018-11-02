@@ -1,6 +1,7 @@
 import { applyMiddleware, combineReducers, createStore, } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { connectRoutes } from 'redux-first-router';
+import { IntlReducer as Intl } from 'react-redux-multilingual';
 import createHistory from 'history/createBrowserHistory';
 import thunk from 'redux-thunk';
 import queryString from 'query-string';
@@ -20,12 +21,10 @@ export { initialDispatch };
 const rootReducer = combineReducers({
     ...reducers,
     page,
+    Intl,
     location: reducer,
 });
 
 const middlewares = applyMiddleware(middleware, thunk);
 
-export const store = createStore(
-    rootReducer,
-    composeWithDevTools(enhancer, middlewares)
-);
+export const store = createStore(rootReducer, composeWithDevTools(enhancer, middlewares));

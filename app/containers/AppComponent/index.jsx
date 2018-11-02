@@ -27,51 +27,42 @@ import NotFound from '../NotFound/index.jsx';
 
 // import Switcher from './switcher.jsx';
 
-class AppComponent extends Component {
-    render() {
-        return(
-            <Scrollbars className='scrollbar' style={{ width: '100%', height: '100vh' }}>
-                {/* <Switcher /> */}
-                <Router history={history}>
-                    {window.location.pathname === '/admin' ? 
-                        <main className='main'>
+const AppComponent = () => {
+    return(
+        <Scrollbars className='scrollbar' style={{ width: '100%', height: '100vh' }}>
+            {/* <Switcher /> */}
+            <Router history={history}>
+                {window.location.pathname === '/admin' ? 
+                    <main className='main'>
+                        <Switch>
+                            <Route path='/admin' component={AdminPanel} />
+                        </Switch>
+                    </main>
+                :
+                    <>
+                        <Header />
+                        <main className='main page'>
                             <Switch>
-                                <Route path='/admin' component={AdminPanel} />
+                                <Route path='/' exact component={Home} />
+                                <Route path='/news' component={News} />
+                                <Route path='/trade' component={Trade} />
+                                <Route path='/exchange' component={Exchange} />
+                                <Route path='/wallet' component={Wallet} />
+                                <Route path='/notifications' component={Notifications} />
+                                <Route path='/settings' component={Settings} />
+                                <Route path='/login' component={Login} />
+                                <Route path='/signup' component={Signup} />
+                                <Route path='/forgot' component={ForgotPassword} />
+                                <Route path='/terms' component={TermsConditions} />
+                                <Route component={NotFound} />
                             </Switch>
+                            <Footer />
                         </main>
-                    :
-                        <>
-                            <Header />
-                            <main className='main page'>
-                                <Switch>
-                                    <Route path='/' exact component={Home} />
-                                    <Route path='/news' component={News} />
-                                    <Route path='/trade' component={Trade} />
-                                    <Route path='/exchange' component={Exchange} />
-                                    <Route path='/wallet' component={Wallet} />
-                                    <Route path='/notifications' component={Notifications} />
-                                    <Route path='/settings' component={Settings} />
-                                    <Route path='/login' component={Login} />
-                                    <Route path='/signup' component={Signup} />
-                                    <Route path='/forgot' component={ForgotPassword} />
-                                    <Route path='/terms' component={TermsConditions} />
-                                    <Route component={NotFound} />
-                                </Switch>
-                                <Footer />
-                            </main>
-                        </>
-                    }
-                </Router>
-            </Scrollbars>
-        );
-    }
+                    </>
+                }
+            </Router>
+        </Scrollbars>
+    );
 }
 
-export default connect(
-    state => ({
-
-    }),
-    dispatch => ({
-        
-    })
-)(AppComponent);
+export default connect()(AppComponent);
