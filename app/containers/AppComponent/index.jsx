@@ -25,9 +25,10 @@ import ForgotPassword from '../ForgotPassword/index.jsx';
 import TermsConditions from '../TermsConditions/index.jsx';
 import NotFound from '../NotFound/index.jsx';
 
+import { withTranslate } from 'react-redux-multilingual';
 // import Switcher from './switcher.jsx';
 
-const AppComponent = () => {
+const AppComponent = ({ translate }) => {
     return(
         <Scrollbars className='scrollbar' style={{ width: '100%', height: '100vh' }}>
             {/* <Switcher /> */}
@@ -40,7 +41,7 @@ const AppComponent = () => {
                     </main>
                 :
                     <>
-                        <Header />
+                        <Header translateHeader={ translate('header') } />
                         <main className='main page'>
                             <Switch>
                                 <Route path='/' exact component={Home} />
@@ -65,4 +66,4 @@ const AppComponent = () => {
     );
 }
 
-export default connect()(AppComponent);
+export default connect()(withTranslate(AppComponent));

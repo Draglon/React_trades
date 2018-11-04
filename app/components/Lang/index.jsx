@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withTranslate, IntlActions } from 'react-redux-multilingual';
+import { getLocale } from '../../store/selector.jsx';
 
 class Lang extends Component {
     render() {
-        const { setLeng } = this.props;
+        const { locale, setLeng } = this.props;
 
         return (
             <div className='lang'>
-                <div className='lang__btn'>en</div>
+                <div className='lang__btn'>{locale}</div>
 
                 <ul className='lang__list'>
                     <li className='lang__item' onClick={() => { setLeng('en') }}>English</li>
@@ -21,7 +22,7 @@ class Lang extends Component {
 
 export default connect(
     state => ({
-
+        locale: getLocale(state),
     }),
     dispatch => ({
         setLeng: (lang) => {

@@ -15,14 +15,14 @@ let logged = false;
 
 class Header extends Component {
     render() {
-        const { menuVisible } = this.props;
+        const { translateHeader, menuVisible } = this.props;
 
         return (
             <header className='header'>
                 <div className='wrapper'>
                     <Logo />
                     <div className={`header__nav${menuVisible ? ' active' : ''}`}>
-                        <Navbar />
+                        <Navbar translateNavbar={translateHeader.navbar} />
                         <Notification />
                         <Lang />
                         {logged ? <Profile /> : <Auth />}
