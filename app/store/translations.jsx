@@ -39,6 +39,12 @@ module.exports = {
         linkTermsConditions: 'Terms and Conditions',
         textAlreadyRegistered: 'Already Registered?',
         linkLogin: 'Log in'
+      },
+      resetPassword: {
+        title: 'Reset Password',
+        button: 'Confirm',
+        linkCreateAccount: 'Create accaunt',
+        textNotRegistered: 'Not registered yet?',
       }
     }
   },
@@ -82,6 +88,12 @@ module.exports = {
         linkTermsConditions: 'соглашения',
         textAlreadyRegistered: 'Already Registered?',
         linkLogin: 'Log in'
+      },
+      resetPassword: {
+        title: 'Сброс пароля',
+        button: 'Подтвердить',
+        linkCreateAccount: 'Cоздать учетную запись',
+        textNotRegistered: 'Еще не зарегистрированы?',
       }
     }
   }

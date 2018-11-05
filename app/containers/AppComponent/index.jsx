@@ -53,7 +53,7 @@ const AppComponent = ({ translate }) => {
                                 <Route path='/settings' component={Settings} />
                                 <Route path='/login' component={() => <Login translateLogin={ translate('login') } />} />
                                 <Route path='/signup' component={() => <Signup translateSignup={ translate('signup') } />} />
-                                <Route path='/forgot' component={ForgotPassword} />
+                                <Route path='/forgot' component={() => <ForgotPassword translateResetPassword={ translate('resetPassword') } />} />
                                 <Route path='/terms' component={TermsConditions} />
                                 <Route component={NotFound} />
                             </Switch>
