@@ -4,42 +4,44 @@ import {NavLink, BrowserRouter}  from 'react-router-dom';
 
 class Footer extends Component {      
     render() {
+        const { translateFooter } = this.props;
+        const navbar = translateFooter.navbar;
         return (
             <footer className='footer'>
                 <div className='wrapper'>
                     <nav className='footer__nav'>
                         <div className='footer__item'>
-                            <h3 className='footer__title'>Продукты</h3>
+                            <h3 className='footer__title'>{navbar[0].title}</h3>
                             <ul className='footer__list'>
-                                <li><NavLink to='/wallet'>Кошелек</NavLink></li>
-                                <li><NavLink to='/trade'>Торги</NavLink></li>
-                                <li><NavLink to='/exchange'>Обмен</NavLink></li>
-                                <li><NavLink to='/'>API</NavLink></li>
+                                <li><NavLink to='/wallet'>{navbar[0].menu[0]}</NavLink></li>
+                                <li><NavLink to='/trade'>{navbar[0].menu[1]}</NavLink></li>
+                                <li><NavLink to='/exchange'>{navbar[0].menu[2]}</NavLink></li>
+                                <li><NavLink to='/'>{navbar[0].menu[3]}</NavLink></li>
                             </ul>
                         </div>
                         <div className='footer__item'>
-                            <h3 className='footer__title'>Информация</h3>
+                            <h3 className='footer__title'>{navbar[1].title}</h3>
                             <ul className='footer__list'>
-                                <li><NavLink to='/'>Комисии и лимиты</NavLink></li>
-                                <li><NavLink to='/'>Реферальная программа</NavLink></li>
-                                <li><NavLink to='/'>Служба поддержки</NavLink></li>
+                                <li><NavLink to='/'>{navbar[1].menu[0]}</NavLink></li>
+                                <li><NavLink to='/'>{navbar[1].menu[1]}</NavLink></li>
+                                <li><NavLink to='/'>{navbar[1].menu[2]}</NavLink></li>
                             </ul>
                         </div>
                         <div className='footer__item'>
-                            <h3 className='footer__title'>Компания</h3>
+                            <h3 className='footer__title'>{navbar[2].title}</h3>
                             <ul className='footer__list'>
-                                <li><NavLink to='/'>О нас</NavLink></li>
-                                <li><NavLink to='/'>Контакты</NavLink></li>
-                                <li><NavLink to='/news'>Новости</NavLink></li>
+                                <li><NavLink to='/'>{navbar[2].menu[0]}</NavLink></li>
+                                <li><NavLink to='/'>{navbar[2].menu[1]}</NavLink></li>
+                                <li><NavLink to='/news'>{navbar[2].menu[2]}</NavLink></li>
                             </ul>
                         </div>
                         <div className='footer__item'>
-                            <h3 className='footer__title'>Документы</h3>
+                            <h3 className='footer__title'>{navbar[3].title}</h3>
                             <ul className='footer__list'>
-                                <li><NavLink to='/'>Договор оферты</NavLink></li>
-                                <li><NavLink to='/'>Политика конфиденциальности</NavLink></li>
-                                <li><NavLink to='/'>AML</NavLink></li>
-                                <li><NavLink to='/'>Пользовательское соглашение</NavLink></li>
+                                <li><NavLink to='/'>{navbar[3].menu[0]}</NavLink></li>
+                                <li><NavLink to='/'>{navbar[3].menu[1]}</NavLink></li>
+                                <li><NavLink to='/'>{navbar[3].menu[2]}</NavLink></li>
+                                <li><NavLink to='/'>{navbar[3].menu[3]}</NavLink></li>
                             </ul>
                         </div>
                     </nav>

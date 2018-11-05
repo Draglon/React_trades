@@ -57,7 +57,7 @@ const AppComponent = ({ translate }) => {
                                 <Route path='/terms' component={TermsConditions} />
                                 <Route component={NotFound} />
                             </Switch>
-                            <Footer />
+                            <Footer translateFooter={ translate('footer') } />
                         </main>
                     </>
                 }
