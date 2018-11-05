@@ -24,6 +24,21 @@ module.exports = {
             menu: ['Contract offer', 'Privacy policy', 'AML Policy', 'Terms of use']
           }
         ]
+      },
+      login: {
+        title: 'Login',
+        button: 'Login',
+        linkForgot: 'Forgot password?',
+        linkCreateAccount: 'Create accaunt',
+        textNotRegistered: 'Not registered yet?',
+      },
+      signup: {
+        title: 'Sign up',
+        button: 'Sign up',
+        labelAccept: 'I accept',
+        linkTermsConditions: 'Terms and Conditions',
+        textAlreadyRegistered: 'Already Registered?',
+        linkLogin: 'Log in'
       }
     }
   },
@@ -52,6 +67,21 @@ module.exports = {
             menu: ['Договор оферты', 'Политика конфиденциальности', 'AML', 'Пользовательское соглашение']
           }
         ]
+      },
+      login: {
+        title: 'Авторизация',
+        button: 'Авторизоваться',
+        linkForgot: 'Забыли пароль?',
+        linkCreateAccount: 'Cоздать учетную запись',
+        textNotRegistered: 'Еще не зарегистрированы?',
+      },
+      signup: {
+        title: 'Регистрация',
+        button: 'Зарегистрироваться',
+        labelAccept: 'Я согласен с условиями',
+        linkTermsConditions: 'соглашения',
+        textAlreadyRegistered: 'Already Registered?',
+        linkLogin: 'Log in'
       }
     }
   }

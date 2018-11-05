@@ -51,8 +51,8 @@ const AppComponent = ({ translate }) => {
                                 <Route path='/wallet' component={Wallet} />
                                 <Route path='/notifications' component={Notifications} />
                                 <Route path='/settings' component={Settings} />
-                                <Route path='/login' component={Login} />
-                                <Route path='/signup' component={Signup} />
+                                <Route path='/login' component={() => <Login translateLogin={ translate('login') } />} />
+                                <Route path='/signup' component={() => <Signup translateSignup={ translate('signup') } />} />
                                 <Route path='/forgot' component={ForgotPassword} />
                                 <Route path='/terms' component={TermsConditions} />
                                 <Route component={NotFound} />
