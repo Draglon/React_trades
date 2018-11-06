@@ -2,7 +2,15 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {NavLink, BrowserRouter}  from 'react-router-dom';
 
+import Field from '../../components/Forms/Field.jsx';
+
 class ForgotPassword extends Component {
+
+    handleSubmit(e) {
+        e.preventDefault();
+        alert('Forgot Password');
+    }
+
     render() {
         const { translateResetPassword } = this.props;
         const resetPassword = translateResetPassword;
@@ -10,22 +18,11 @@ class ForgotPassword extends Component {
             <section className='section forgot'>
                 <div className='wrapper'>
                     <h2 className='forgot__title'>{resetPassword.title}</h2>
-                    <form className='form'>
-                        <div className='form__field form__field--error'>
-                            <input type='email' placeholder='Email' />
-                            <i className='icon-envelop'></i>
-                            <span className='form__field-error'>Error</span>
-                        </div>
-                        <div className='form__field'>
-                            <input type='password' placeholder='Password' />
-                            <i className='icon-key'></i>
-                            <span className='form__field-error'>Error</span>
-                        </div>
-                        <div className='form__field'>
-                            <input type='password' placeholder='Confirm Password' />
-                            <i className='icon-key'></i>
-                            <span className='form__field-error'>Error</span>
-                        </div>
+                    <form className='form' onSubmit={(e) => this.handleSubmit(e)}>
+                        <Field type='email' placeholder='Email' classIcon='icon-envelop' required='true' />
+                        <Field type='password' placeholder='Password' classIcon='icon-key' required='true' />
+                        <Field type='password' placeholder='Confirm Password' classIcon='icon-key' required='true' />
+
                         <div className='form__btns'>
                             <button className='btn btn-primary btn--middle btn-forgot'>{resetPassword.button}</button>
                         </div>

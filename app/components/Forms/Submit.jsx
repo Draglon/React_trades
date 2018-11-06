@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-class Field extends Component {      
+class Submit extends Component {      
     render() {
-        
+        const { className, value } = this.props;
+
         return (
-            <div className='form__btns'>
-                
-            </div>
+            <input type='submit' className={className} value={value || ''} />
         );
     }
 }
@@ -19,4 +18,4 @@ export default connect(
     dispatch => ({
         
     })
-)(Field);
+)(Submit);

@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {NavLink, BrowserRouter}  from 'react-router-dom';
-// import Login from '../Login';
+
+import Field from '../../components/Forms/Field.jsx';
 
 class Signup extends Component {
+
+    handleSubmit(e) {
+        e.preventDefault();
+        alert("Signup");
+    }
+
     render() {
         const { translateSignup } = this.props;
         const signup = translateSignup;
@@ -11,27 +18,12 @@ class Signup extends Component {
             <section className='section signup'>
                 <div className='wrapper'>
                     <h2 className='signup__title'>{signup.title}</h2>
-                    <form className='form'>
-                        <div className='form__field form__field--error'>
-                            <input type='email' placeholder='Email' />
-                            <i className='icon-envelop'></i>
-                            <span className='form__field-error'>Error</span>
-                        </div>
-                        <div className='form__field'>
-                            <input type='text' placeholder='Name' />
-                            <i className='icon-user'></i>
-                            <span className='form__field-error'>Error</span>
-                        </div>
-                        <div className='form__field'>
-                            <input type='password' placeholder='Password' />
-                            <i className='icon-key'></i>
-                            <span className='form__field-error'>Error</span>
-                        </div>
-                        <div className='form__field'>
-                            <input type='password' placeholder='Password' />
-                            <i className='icon-key'></i>
-                            <span className='form__field-error'>Error</span>
-                        </div>
+                    <form className='form' onSubmit={(e) => this.handleSubmit(e)}>
+                        <Field type='email' placeholder='Email' classIcon='icon-envelop' required='true' />
+                        <Field type='text' placeholder='Name' classIcon='icon-user' required='true' />
+                        <Field type='password' placeholder='Password' classIcon='icon-key' required='true' />
+                        <Field type='password' placeholder='Confirm Password' classIcon='icon-key' required='true' />
+
                         <div className='form__field'>
                             <input type='checkbox' id='agree' />
                             <label htmlFor='agree'>{signup.labelAccept} <NavLink to='/terms'>{signup.linkTermsConditions}</NavLink></label>
